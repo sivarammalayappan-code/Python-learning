@@ -1,2 +1,2 @@
-print ("Just learning to work with github repository")
+print ("Just learning to work with github repository!")
 
