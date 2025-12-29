@@ -1,1 +1,2 @@
-print ("Lets learn python !")
+print ("Just learning to work with github repository")
+
