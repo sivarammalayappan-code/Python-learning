@@ -160,3 +160,22 @@ bmi=(weight/height**2)
 print("Dear",name,"your bmi is",bmi)
 
 ########################################################################################
+
+#Number manipulation and f-string in python
+
+print(22/7)                 # Prints 3.142857142857143
+print(round(22/7))          # Prints 3
+print(round((22/7),2))      #Prints 3.14
+
+#To use a old variable value we can use as below
+
+variable_1= 1
+variable_1 = variable_1 + 1
+print(variable_1)    # Prints 2.
+
+#For the above scenario we can use like below .
+variable_2= 1
+variable_2 += 1
+print(variable_2)  #Prints two . Same way we can use for other operations  -= , *= , /=
+
+
