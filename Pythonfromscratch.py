@@ -179,3 +179,21 @@ variable_2 += 1
 print(variable_2)  #Prints two . Same way we can use for other operations  -= , *= , /=
 
 
+#f-string
+
+name="siva"
+age=32
+weight=88.5
+
+print("Dear",name,", \nyou are",age,"years old and your weight is",weight,"kg")
+
+'''
+Dear siva , 
+you are 32 years old and your weight is 88.5 kg
+'''
+
+#Same output can be obtained with f-string easier
+
+print(f"Dear {name} , \nyou are {age} years old and your weight is {weight} kg ")
+
+###############################
