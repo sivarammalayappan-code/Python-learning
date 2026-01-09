@@ -1,65 +1,3 @@
-#----Printing----
-
-#Include text inside "" to make it as string else it will error
-
-print("Lets learn python!")
-
-
-
-#-----String manipulation-----
-
-# \n  will be used to print in new line
-
-print("Hi There,\nHope you are doing good!")
-
-# Concatenate strings
-
-print("Hello"+"sivaram")       # It will print as Hellosivaram  . No space will be added
-print("Hello"+" "+"sivaram")   # It will print as Hello sivaram . Now we can see space
-print("Hello","sivaram")       # It will print as Hello sivaram . Now we can see space
-
-#Inputs
-
-#Using input function we can get inputs from user
-
-input("Hi , How are you? : ")   #Once executed it will wait for user input
-
-print("Hello" + input("What is your name? :")+"!") #No spaces will be added between each
-print("Hello" , input("What is your name? :"),"!")  #Using comma will give space between each
-
-#Variables
-
-#Variables will hold the values and used in future
-#If same variable name used twice it will only hold the last value
-
-name= input("What is your name? : ")
-print(name)
-
-#Length function   len()
-
-name= input("What is your name? : ")
-print(len(name))
-
-#Variable naming
-#Always give a reasonable name to a variable so that you can able to understand after sometime
-#Do not use the reserved words
-#Do not use space in the variable name
-
-# username="sivaram" -->good
-# user_name="sivaram" -->good
-# user name="sivaram" --> Not acceptable
-
-
-#Project 1
-#Band name generator
-
-print("Welcome to the Band name Generator")
-city=input("What's the name of the city you grew up in ? : \n")
-pet_name=input("What's your pet's name : \n")
-print("Your band name could be",city,pet_name)
-
-
-#################################################################
 #Datatype
 
 #Check datatype
@@ -142,21 +80,12 @@ print(int(math.sqrt(4)))        # Prints 2
 
 print(2*3/4+5-2**2+(2+2))  #Prints 6.5
 
+#Number manipulation and f-string in python
 
-#########################################################
-#PROJECT 2
-#BMI CALCULATOR
+print(22/7)   # Prints 3.142857142857143
+print(round(22/7)) # Prints 3
+print(round((22/7),2)) #Prints 3.14
 
-#BMI FORMULA
-'''
-BMI=Weight in kg/ Height in m²
-'''
 
-print("Welcome \nFind your BMI!!!")
-name=input("Please enter your name : ")
-weight=float(input("Please enter your weight(kg) : "))
-height=float(input("Please enter your height(meter) : "))
-bmi=(weight/height**2)
-print("Dear",name,"your bmi is",bmi)
 
-########################################################################################
+
