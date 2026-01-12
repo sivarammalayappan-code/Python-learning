@@ -197,7 +197,7 @@ you are 32 years old and your weight is 88.5 kg
 print(f"Dear {name} , \nyou are {age} years old and your weight is {weight} kg ")
 
 ###############################
-project 3
+#project 3
 
 #TIP CALCULATOR
 
@@ -453,3 +453,166 @@ else:
     print("Invalid input. Game over!")
 
 ##############################################################################
+
+##JAN 12 2026
+
+#RANDOMISATION
+
+import random
+
+random_integer=random.randint(1,100000)
+print(f"Random number is {random_integer}")
+
+random_number_o_to_1=random.random()     #Gives float values
+print(f"Random number is {random_number_o_to_1}")
+
+random_number_o_to_1_manipulated=random.random() * 8
+print(f"Random number is {random_number_o_to_1_manipulated}")
+
+random_uniform=random.uniform(1,10)    #Decimal values
+print(f"Random number is {random_uniform}")
+
+names = ["Ram", "Sita", "Arjun", "Krishna"]
+winner = random.choice(names)             #Choose randomly from list
+print(f"And the winner is {winner}")
+
+names = ["Ram", "Sita", "Arjun", "Krishna"]
+winner = random.choices(names, k=2)             #Choose randomly and prints 2 values duplicate allowed
+print(f"And the winner is {winner}")
+
+names = ["Ram", "Sita", "Arjun", "Krishna"]
+winners = random.sample(names, 2)  #Choose randomly and prints 2 values but no duplicate
+print(winners)
+
+cards = ["A", "K", "Q", "J"]
+random.shuffle(cards)         #shuffle the values
+print(cards)
+
+#random.randrange(start, stop, step)
+range=random.randrange(1, 10, 3)
+print(f"{range}")
+
+######################################################################################
+#HEAD OR TAIL
+import random
+print("Lets toss the coin!")
+
+side=random.randint(1,2)
+if side == 1:
+    print("Heads")
+else:
+    print("Tails")
+
+##########################################################################################
+
+#LISTS
+#Keep multiple values in same variable
+#eg :  fruits=["apple","orange"]
+
+fruit =["Guava","pomegranate","jackfruit"]
+
+print(f"{fruit}")   #Prints all ['Guava', 'pomegranate', 'jackfruit']
+print(fruit[0])     #prints guava . Always remember in program everything start from zero.
+print(fruit[2])     #prints jackfruit
+print(fruit[-1])    #prints from reverse order . prints jackfruit
+
+#################################
+#Edit list
+#Alter guava with apple
+fruit =["Guava","pomegranate","jackfruit"]
+fruit[0]="apple"
+print(fruit)  # Output is ['apple', 'pomegranate', 'jackfruit']
+
+####################################
+#Add anything in list
+
+fruit =["Guava","pomegranate","jackfruit"]
+fruit.append("orange")
+print(fruit)  #Output is ['Guava', 'pomegranate', 'jackfruit', 'orange']
+
+########################################
+#Extend the list with multiple values
+
+fruit =["Guava","pomegranate","jackfruit"]
+fruit.extend(["orange","grapes"])
+print(fruit)  #Output is ['Guava', 'pomegranate', 'jackfruit', 'orange', 'grapes']
+
+#Go through remaining things
+#https://docs.python.org/3/tutorial/datastructures.html
+
+#########################################################################
+#Who pay the bill
+
+
+import random
+friends=["Alice","Bob","Charlie","David","Emanuel"]
+payer=random.choice(friends)
+print(payer)
+
+
+##########################################################################################
+#NESTED LISTS
+
+fruits=["apple","orange","pineapple"]
+vegetable=["raddish","bittergourd","bottlegourd"]
+
+fruit_nest=[fruits,vegetable]
+print(fruit_nest)
+
+#output will be [['apple', 'orange', 'pineapple'], ['raddish', 'bittergourd', 'bottlegourd']]
+
+#############################################################################################
+
+#ROCK PAPER SCISSOR
+import random
+rps= ["ROCK","PAPER","SCISSOR"]
+user_choice =input("Please choose one value:[Rock/Paper/Scissor] : ").upper()
+system_choice=random.choice(rps)
+
+images ={
+"ROCK" : '''
+    _______
+---'   ____)
+      (_____)
+      (_____)
+      (____)
+---.__(___)
+''',
+
+"PAPER" : '''
+    _______
+---'   ____)____
+          ______)
+          _______)
+         _______)
+---.__________)
+''',
+
+"SCISSOR" : '''
+    _______
+---'   ____)____
+          ______)
+       __________)
+      (____)
+---.__(___)
+'''
+}
+
+if user_choice == system_choice:
+    print(f"Your choice\n{images[user_choice]}\nSystem choice\n{images[system_choice]}\nYou are even")
+elif user_choice == rps[0] and system_choice == rps[1]:
+    print(f"Your choice\n{images[user_choice]}\nSystem choice\n{images[system_choice]}\nYou lost")
+elif user_choice == rps[0] and system_choice == rps[2]:
+    print(f"Your choice\n{images[user_choice]}\nSystem choice\n{images[system_choice]}\nYou won")
+elif user_choice == rps[1] and system_choice == rps[0]:
+    print(f"Your choice\n{images[user_choice]}\nSystem choice\n{images[system_choice]}\nYou won")
+elif user_choice == rps[1] and system_choice == rps[2]:
+    print(f"Your choice\n{images[user_choice]}\nSystem choice\n{images[system_choice]}\nYou lost")
+elif user_choice == rps[2] and system_choice == rps[0]:
+    print(f"Your choice\n{images[user_choice]}\nSystem choice\n{images[system_choice]}\nYou lost")
+elif user_choice == rps[2] and system_choice == rps[1]:
+    print(f"Your choice\n{images[user_choice]}\nSystem choice\n{images[system_choice]}\nYou won")
+else:
+    print("Invalid input . You lost")
+
+##############################################################################################
