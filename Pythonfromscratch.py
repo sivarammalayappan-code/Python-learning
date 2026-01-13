@@ -616,3 +616,113 @@ else:
     print("Invalid input . You lost")
 
 ##############################################################################################
+#14th jan
+
+#LOOPS
+
+#FOR LOOP
+'''
+for item in list_of_items:
+    Do this
+'''
+
+fruits= ["Mango","Banana","Papaya"]
+for fruit in fruits:
+    print(fruit)
+
+'''
+Note: Indendation should be proper
+Output will be like
+
+Mango
+Banana
+Papaya
+'''
+
+
+marks= [98,100,87,90,78]
+total_marks=sum(marks)
+print(total_marks)                 #Prints added value of marks 453. sum is inbuilt function.
+
+#We can do same with for loop
+
+
+marks= [98,100,87,90,78]
+total=0
+for mark in marks:
+    total += mark
+print(total)
+
+#Find the largest number in list
+
+age =[90,192,13,80,-25,-10,40,23,10,2,4,220,100]
+
+big=age[0]   #Assuming the first value as comparison
+for large in age:
+    if large > big:
+        big = large
+print(big)
+
+#same can be achieved by inbuilt function
+
+print(max(age))
+
+
+#################################################################
+#RANGE FUNCTION
+
+'''
+for number in range(a,b)
+    print number
+'''
+
+print(range(1,10))     #range function will not give any out when run individually
+#output is range(1,10)
+
+
+for number in range(1,10):
+    print(number)  #This will print 1 to 9 . first value included and last value excluded.
+
+for number in range(5):
+    print(number)  #This will print 0 to 4
+
+for number in range(2,7):
+    print(number)  # This will print 2 to 6 . first value included and last value excluded.
+
+for number in range(1,10,2):
+    print(number) # This will print 1,3,5,7,9.  It will steps by 2.
+
+#Add values from 1 to 100
+
+sum_of_1_to_100=0
+for number in range(1,101):
+    sum_of_1_to_100 += number
+print(sum_of_1_to_100)        #Output is 5050
+
+########################################################################
+
+#PASSWORD GENERATOR
+
+
+print("Welcome to the PyPassword Generator!")
+char = int(input("How many letters would you like in your password?: "))
+sym = int(input(f"How many symbols would you like?: "))
+num = int(input(f"How many numbers would you like?:"))
+
+
+
+
+import random
+letters = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z', 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z']
+numbers = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9']
+symbols = ['!', '#', '$', '%', '&', '(', ')', '*', '+']
+
+f_1=random.choices(letters, k=char)
+f_1.extend(random.choices(numbers, k=num))
+f_1.extend(random.choices(symbols, k=sym))
+
+random.shuffle(f_1)
+print(''.join(f_1))
+
+
+################################################################################
