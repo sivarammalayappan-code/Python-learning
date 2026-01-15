@@ -726,3 +726,68 @@ print(''.join(f_1))
 
 
 ################################################################################
+#15jan2025
+#Test
+
+
+for number in range(1,101):
+    if (number%3) == 0 and (number%5) == 0 :
+        print("FizzBuzz")
+    elif (number%3) == 0:
+        print("Fizz")
+    elif (number%5) == 0:
+        print("Buzz")
+    else:
+        print(number)
+
+###################################################################################
+#Create your own function
+
+#Define your function
+def welcome():
+
+    name=input("your name please: ")
+    print(f"Hello {name} ")
+
+
+#Call your function
+
+welcome()
+
+#############################################################################
+#Indendation
+
+#Space is officially recommended in python . Not tabs
+#But we can adjust in pcharm and other tools
+
+#############################################################################
+#WHILE LOOP
+
+'''
+while something_is_true:
+    do this till the condition comes false
+'''
+
+count = 1
+
+while count <= 5:
+    print("Count is:", count)
+    count = count + 1
+
+print("Loop finished")
+
+#Simple username check with while loop
+
+a=input("Please enter username: ")
+while a != "Siva":
+    print("Invalid username")
+    a = input("Please enter valid username: ")
+
+
+########################################################################################################
+#16jan2025
+
+#Maze reboorg still not figured took two days and some scenarios its not working
+
+#Started hangman lessons
+
