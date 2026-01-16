@@ -791,3 +791,22 @@ while a != "Siva":
 
 #Started hangman lessons
 
+#17jan2025
+
+#Hangman practice
+
+#Task 1
+
+import random
+word_list = ["aardvark", "baboon", "camel"]
+
+choosen_word=random.choice(word_list)
+print(choosen_word)
+
+guess=input("Guess the word? : ").lower()
+
+for letter in choosen_word:
+    if letter == guess:
+        print("Right")
+    else:
+        print("Wrong")
