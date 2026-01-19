@@ -1,68 +1,22 @@
-#Pizza order
 
-print("Welcome to Pizza Hub !")
-pizza_size=input("Enter the pizza size S for small, M for medium or L for large :  ").upper()
-bill=0
 
-if pizza_size =="S":
-    bill=25
-    pepperoni =input("Do you want to add pepperoni? Type y for yes or n for no : ").upper()
+# TODO-1 - Randomly choose a word from the word_list and assign it to a variable called chosen_word. Then print it.
 
-    if pepperoni =="Y":
-        bill += 5
-    elif pepperoni =="N":
-        bill= 25
+# TODO-2 - Ask the user to guess a letter and assign their answer to a variable called guess. Make guess lowercase.
+
+# TODO-3 - Check if the letter the user guessed (guess) is one of the letters in the chosen_word. Print "Right" if it
+#  is, "Wrong" if it's not.
+
+import random
+word_list = ["aardvark", "baboon", "camel"]
+
+choosen_word=random.choice(word_list)
+print(choosen_word)
+
+guess=input("Guess the word? : ").lower()
+
+for letter in choosen_word:
+    if letter == guess:
+        print("Right")
     else:
-        print("Please enter correct value")
-
-    extra_cheese = input("Do you want extra cheese ? Type y for yes or n for no : ").upper()
-    if extra_cheese == "Y":
-        bill += 1
-        print(f"your bill is {bill}")
-    elif extra_cheese == "N":
-        print(f"your bill is {bill}")
-    else:
-        print("Please enter correct value")
-
-elif pizza_size == "M":
-    bill = 50
-    pepperoni = input("Do you want to add pepperoni? Type y for yes or n for no : ").upper()
-
-    if pepperoni == "Y":
-        bill += 10
-    elif pepperoni == "N":
-        bill = 50
-    else:
-        print("Please enter correct value")
-
-    extra_cheese = input("Do you want extra cheese ? Type y for yes or n for no : ").upper()
-    if extra_cheese == "Y":
-        bill += 1
-        print(f"your bill is {bill}")
-    elif extra_cheese == "N":
-        print(f"your bill is {bill}")
-    else:
-        print("Please enter correct value")
-
-elif pizza_size == "L":
-    bill = 100
-    pepperoni = input("Do you want to add pepperoni? Type y for yes or n for no : ").upper()
-
-    if pepperoni == "Y":
-        bill += 10
-    elif pepperoni == "N":
-        bill = 100
-    else:
-        print("Please enter correct value")
-
-    extra_cheese = input("Do you want extra cheese ? Type y for yes or n for no : ").upper()
-    if extra_cheese == "Y":
-        bill += 1
-        print(f"your bill is {bill}")
-    elif extra_cheese == "N":
-        print(f"your bill is {bill}")
-    else:
-        print("Please enter correct value")
-
-else:
-    print("Please enter correct value")
+        print("Wrong")
