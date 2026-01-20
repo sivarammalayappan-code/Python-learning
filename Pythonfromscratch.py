@@ -818,10 +818,12 @@ import random
 word_list = ["aardvark", "baboon", "camel"]
 
 chosen_word = random.choice(word_list)
-length= len(chosen_word)
-list=("_"*length)
 
 # TODO-1: Create a "placeholder" with the same number of blanks as the chosen_word
+
+length= len(chosen_word)
+placeholder=("_"*length)
+print(placeholder)
 
 guess = str(input("Guess a letter: ")).lower()
 
