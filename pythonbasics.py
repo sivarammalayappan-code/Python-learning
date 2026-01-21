@@ -148,3 +148,6 @@ Binary Types        :	bytes, bytearray, memoryview
 None Type           :	NoneType
 
 '''
+
+x=bool(0)
+print(x)
